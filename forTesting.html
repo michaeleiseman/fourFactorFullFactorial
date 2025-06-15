@@ -648,20 +648,21 @@
             button.textContent = "Change Student";
             document.getElementById("promptContainer").appendChild(button);
             button.addEventListener("click", reset, false);
-            let label = document.createElement("label");
-            label.setAttribute("for", "numberOfExperiments");
-            label.textContent = "Number of Experiments";
-            document.getElementById("numberControl").appendChild(label);
-            let input = document.createElement("input");
-            input.id = "numberOfExperiments";
-            input.setAttribute("type", "number");
-            document.getElementById("numberControl").appendChild(input);
-            button = document.createElement("button");
-            button.textContent = "Set the Number of Experiments"
-            document.getElementById("inputControl").appendChild(button);
-            button.addEventListener("click", createDesign, false);
-            window.addEventListener("keydown", createDesign, false);
-            input.focus();
+            createDesign();
+            // let label = document.createElement("label");
+            // label.setAttribute("for", "numberOfExperiments");
+            // label.textContent = "Number of Experiments";
+            // document.getElementById("numberControl").appendChild(label);
+            // let input = document.createElement("input");
+            // input.id = "numberOfExperiments";
+            // input.setAttribute("type", "number");
+            // document.getElementById("numberControl").appendChild(input);
+            // button = document.createElement("button");
+            // button.textContent = "Set the Number of Experiments"
+            // document.getElementById("inputControl").appendChild(button);
+            // button.addEventListener("click", createDesign, false);
+            // window.addEventListener("keydown", createDesign, false);
+            // input.focus();
         }
         class Design {
             constructor(factors, terms, noise) {
