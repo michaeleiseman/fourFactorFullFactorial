@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Factor Full Factorial</title>
+    <title>Four Factor Fractional Factorial</title>
     <style>
         body {
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -99,7 +99,7 @@
         <div id="output"></div>
     </div>
     <script>
-        let users = ["Mingchen Guo", "Donghyun Kim", "Youxi Lin","Han Hui Ling", "Xinyu Liu", "Zihan Ma", "William McBride", "Nikhilesh Pediredla", "Manasvi Rajendra", "Olivia Vlad", "Andrew Zhang", "Demo"];
+        let users = ["Mingchen Guo", "Donghyun Kim", "Youxi Lin","Han Hui Ling", "Xinyu Liu", "Zihan Ma", "William McBride", "Nikhilesh Pediredla", "Manasvi Rajendra", "Olivia Vlad", "Yuanwei Xia", "Andrew Zhang", "Victor Zheng", "Demo"];
         let factors = [
             [
                 {
@@ -323,6 +323,28 @@
             ],
             [
                 {
+                    name: "Warp Count in yarns per cm",
+                    lowerLimit: 30,
+                    upperLimit: 35
+                },
+                {
+                    name: "Yarn Type",
+                    lowerLimit: "Polyester",
+                    upperLimit: "Cotton"
+                },
+                {
+                    name: "Picks per cm",
+                    lowerLimit: 20,
+                    upperLimit: 25
+                },
+                {
+                    name: "Loom Speed in Picks per sec.",
+                    lowerLimit: 3,
+                    upperLimit: 5
+                }
+            ],
+            [
+                {
                     name: "Depth in meters",
                     lowerLimit: 1.5,
                     upperLimit: 2
@@ -341,6 +363,28 @@
                     name: "Load in Kg",
                     lowerLimit: 4,
                     upperLimit: 6
+                }
+            ],
+            [
+                {
+                    name: "Screw Speed in RPM",
+                    lowerLimit: 20,
+                    upperLimit: 30
+                },
+                {
+                    name: "Cooling",
+                    lowerLimit: "Off",
+                    upperLimit: "On"
+                },
+                {
+                    name: "Backmixing Units",
+                    lowerLimit: 2,
+                    upperLimit: 4
+                },
+                {
+                    name: "Percent Filler",
+                    lowerLimit: 2,
+                    upperLimit: 4
                 }
             ],
             [
@@ -370,269 +414,313 @@
             [
                 {
                     factors: [],
-                    coefficent: 102
+                    coefficient: 102
                 },
                 {
                     factors: [factors[0][0]],
-                    coefficent: 17.2
+                    coefficient: 17.2
                 },
                 {
                     factors: [factors[0][1]],
-                    coefficent: -8.7
+                    coefficient: -8.7
                 },
                 {
                     factors: [factors[0][3]],
-                    coefficent: -11.1
+                    coefficient: -11.1
                 },
                 {
                     factors: [factors[0][0], factors[0][1]],
-                    coefficent: 5.2
+                    coefficient: 5.2
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 5.7
+                    coefficient: 5.7
                 },
                 {
                     factors: [factors[1][0]],
-                    coefficent: -0.53
+                    coefficient: -0.53
                 },
                 {
                     factors: [factors[1][1]],
-                    coefficent: 0.82
+                    coefficient: 0.82
                 },
                 {
                     factors: [factors[1][2]],
-                    coefficent: -1.04
+                    coefficient: -1.04
                 },
                 {
                     factors: [factors[1][1], factors[1][2]],
-                    coefficent: 0.63
+                    coefficient: 0.63
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 35.1
+                    coefficient: 35.1
                 },
                 {
                     factors: [factors[2][0]],
-                    coefficent: 7.8
+                    coefficient: 7.8
                 },
                 {
                     factors: [factors[2][2]],
-                    coefficent: -10.1
+                    coefficient: -10.1
                 },
                 {
                     factors: [factors[2][3]],
-                    coefficent: -5.6
+                    coefficient: -5.6
                 },
                 {
                     factors: [factors[2][0], factors[2][2]],
-                    coefficent: 3.9
+                    coefficient: 3.9
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 843
+                    coefficient: 843
                 },
                 {
                     factors: [factors[3][1]],
-                    coefficent: -273
+                    coefficient: -273
                 },
                 {
                     factors: [factors[3][2]],
-                    coefficent: 195
+                    coefficient: 195
                 },
                 {
                     factors: [factors[3][3]],
-                    coefficent: -83.1
+                    coefficient: -83.1
                 },
                 {
                     factors: [factors[3][2], factors[3][3]],
-                    coefficent: 103
+                    coefficient: 103
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 65.8
+                    coefficient: 65.8
                 },
                 {
                     factors: [factors[4][0]],
-                    coefficent: 8.4
+                    coefficient: 8.4
                 },
                 {
                     factors: [factors[4][2]],
-                    coefficent: 5.7
+                    coefficient: 5.7
                 },
                 {
                     factors: [factors[4][3]],
-                    coefficent: -10.2
+                    coefficient: -10.2
                 },
                 {
                     factors: [factors[4][0], factors[4][2]],
-                    coefficent: 4.1
+                    coefficient: 4.1
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 2659
+                    coefficient: 2659
                 },
                 {
                     factors: [factors[5][1]],
-                    coefficent: 242
+                    coefficient: 242
                 },
                 {
                     factors: [factors[5][2]],
-                    coefficent: -307
+                    coefficient: -307
                 },
                 {
                     factors: [factors[5][3]],
-                    coefficent: -415
+                    coefficient: -415
                 },
                 {
                     factors: [factors[5][1], factors[5][2]],
-                    coefficent: 123
+                    coefficient: 123
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 243
+                    coefficient: 243
                 },
                 {
                     factors: [factors[6][0]],
-                    coefficent: 37.5
+                    coefficient: 37.5
                 },
                 {
                     factors: [factors[6][1]],
-                    coefficent: 25.3
+                    coefficient: 25.3
                 },
                 {
                     factors: [factors[6][2]],
-                    coefficent: -35.6
+                    coefficient: -35.6
                 },
                 {
                     factors: [factors[6][0], factors[6][1]],
-                    coefficent: -11.6
+                    coefficient: -11.6
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 4.2
+                    coefficient: 4.2
                 },
                 {
                     factors: [factors[7][0]],
-                    coefficent: -1.04
+                    coefficient: -1.04
                 },
                 {
                     factors: [factors[7][1]],
-                    coefficent: 0.93
+                    coefficient: 0.93
                 },
                 {
                     factors: [factors[7][3]],
-                    coefficent: -0.72
+                    coefficient: -0.72
                 },
                 {
                     factors: [factors[7][0], factors[7][3]],
-                    coefficent: 0.52
+                    coefficient: 0.52
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 1343
+                    coefficient: 1343
                 },
                 {
                     factors: [factors[8][0]],
-                    coefficent: 23.4
+                    coefficient: 23.4
                 },
                 {
                     factors: [factors[8][1]],
-                    coefficent: 30.3
+                    coefficient: 30.3
                 },
                 {
                     factors: [factors[8][3]],
-                    coefficent: -63.6
+                    coefficient: -63.6
                 },
                 {
                     factors: [factors[8][0], factors[8][1]],
-                    coefficent: 13.7
+                    coefficient: 13.7
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 42.7
+                    coefficient: 42.7
                 },
                 {
                     factors: [factors[9][1]],
-                    coefficent: -15.2
+                    coefficient: -15.2
                 },
                 {
                     factors: [factors[9][2]],
-                    coefficent: -5.4
+                    coefficient: -5.4
                 },
                 {
                     factors: [factors[9][3]],
-                    coefficent: 7.9
+                    coefficient: 7.9
                 },
                 {
                     factors: [factors[9][1], factors[9][3]],
-                    coefficent: 4.1
+                    coefficient: 4.1
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 34.2
+                    coefficient: 31.2
                 },
                 {
                     factors: [factors[10][0]],
-                    coefficent: 5.7
+                    coefficient: 7.1
                 },
                 {
                     factors: [factors[10][2]],
-                    coefficent: -10.5
+                    coefficient: -9.6
                 },
                 {
                     factors: [factors[10][3]],
-                    coefficent: -4.2
+                    coefficient: 6.3
                 },
                 {
-                    factors: [factors[10][0], factors[10][2]],
-                    coefficent: 8.6
+                    factors: [factors[10][2], factors[10][3]],
+                    coefficient: -3
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 50
+                    coefficient: 34.2
                 },
                 {
                     factors: [factors[11][0]],
-                    coefficent: 6
-                },
-                {
-                    factors: [factors[11][1]],
-                    coefficent: -4
+                    coefficient: 5.7
                 },
                 {
                     factors: [factors[11][2]],
-                    coefficent: 12
+                    coefficient: -10.5
                 },
                 {
-                    factors: [factors[11][0], factors[11][1]],
-                    coefficent: -4.3
+                    factors: [factors[11][3]],
+                    coefficient: -4.2
+                },
+                {
+                    factors: [factors[11][0], factors[11][2]],
+                    coefficient: 8.6
+                }
+            ],
+            [
+                {
+                    factors: [],
+                    coefficient: 525
+                },
+                {
+                    factors: [factors[12][0]],
+                    coefficient: 123
+                },
+                {
+                    factors: [factors[12][1]],
+                    coefficient: -91
+                },
+                {
+                    factors: [factors[12][2]],
+                    coefficient: 162
+                },
+                {
+                    factors: [factors[12][0], factors[12][2]],
+                    coefficient: -52
+                }
+            ],
+            [
+                {
+                    factors: [],
+                    coefficient: 50
+                },
+                {
+                    factors: [factors[13][0]],
+                    coefficient: 6
+                },
+                {
+                    factors: [factors[13][1]],
+                    coefficient: -4
+                },
+                {
+                    factors: [factors[13][2]],
+                    coefficient: 12
+                },
+                {
+                    factors: [factors[13][0], factors[13][1]],
+                    coefficient: -4.3
                 }
             ]
         ]
-        let noises = [1.5, 0.15, 1.2, 22, 1, 40, 3, 0.2, 3, 1, 1, 1];
+        let noises = [1.5, 0.15, 1.2, 22, 1, 40, 3, 0.2, 3, 1, 0.75, 1, 12, 1];
         let userIndex;
         let buttons;
         reset();
@@ -785,7 +873,7 @@
             generateResponse() {
                 let response = 0;
                 for (let term of this.design.terms) {
-                    let value = term.coefficent;
+                    let value = term.coefficient;
                     for (let factor of term.factors) {
                         value = value * this.factors[this.design.factors.indexOf(factor)].element.value;
                     }
